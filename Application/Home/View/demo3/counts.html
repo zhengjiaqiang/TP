@@ -1,0 +1,15 @@
+<table border='2'>
+		<tr>
+			<td>编号</td>
+			<td>点击次数</td>
+			<td>操作</td>
+		</tr>
+		<tr>
+		<td>{$row.id}</td>	
+		<td>{$row.click_num}</td>	
+		<td><a href="__URL__/show/id/{$row.id}">返回</a></td>	
+		</tr>	
+	</table>
+	<?php 
+    header("refresh:3 url=https://www.baidu.com/");
+	 ?>

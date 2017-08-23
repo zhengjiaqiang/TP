@@ -1,0 +1,30 @@
+
+<center id='fbox'>
+	<p><a href="?l=zh-cn">中文</a>||<a href="?l=en-us">英文</a></p>
+	<form action="__URL__/show">
+	名称:<input type="text" name="goods_name" id="goods_name">
+	颜色:<input type="text" name="goods_color" id="goods_color">
+	<input type="submit" value="{$wellcome}" class="search">
+	</form>
+	<table border='2'>
+		<tr>
+			<td>编号</td>
+			<td>名称</td>
+			<td>颜色</td>
+			<td>地址</td>
+			<td>点击次数</td>
+		</tr>
+		<foreach name='list' item='v'>
+		<tr>
+		<td>{$v.id}</td>	
+		<td>{$v.goods_name}</td>	
+		<td>{$v.goods_color}</td>	
+		<td><a href="__URL__/counts/id/{$v.id}" target='_blank'>{$v.url}</a></td>	
+		<td>{$v.click_num}</td>	
+		</tr>
+		</foreach>	
+	</table>
+	{$show}
+</center>
+
+
